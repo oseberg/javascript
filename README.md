@@ -395,27 +395,27 @@ Other Style Guides
         This is my multiline string.
         There are many like it,
         but this one is mine.
-      `
+      `;
     ```
 
   - [6.3](#6.3) <a name='6.3'></a> Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40).
 
     ```javascript
     // bad
-    const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.'
+    const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
     // bad
     const errorMessage = `This is a super long error that was thrown because \
     of Batman. When you stop to think about how Batman had anything to do \
     with this, you would get nowhere \
-    fast.`
+    fast.`;
 
     // good
     const errorMessage = `
       This is a super long error that was thrown because
       of Batman. When you stop to think about how Batman had anything to do
       with this, you would get nowhere fast.
-    `
+    `;
     ```
 
   <a name="es6-template-literals"></a>

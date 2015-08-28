@@ -5,10 +5,7 @@
 Forked from [Airbnb's excellent javascript style guide.](https://github.com/airbnb/javascript)
 
 Other Style Guides
- - [ES5](es5/)
- - [React](react/)
- - [CSS & Sass](https://github.com/airbnb/css)
- - [Ruby](https://github.com/airbnb/ruby)
+ - [Angular](https://github.com/johnpapa/angular-styleguide)
 
 ## Table of Contents
 

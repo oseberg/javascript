@@ -405,18 +405,20 @@ Other Style Guides
 
     ```javascript
     // bad
-    const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
+    const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.'
 
     // bad
-    const errorMessage = 'This is a super long error that was thrown because \
+    const errorMessage = `This is a super long error that was thrown because \
     of Batman. When you stop to think about how Batman had anything to do \
     with this, you would get nowhere \
-    fast.';
+    fast.`
 
     // good
-    const errorMessage = 'This is a super long error that was thrown because ' +
-      'of Batman. When you stop to think about how Batman had anything to do ' +
-      'with this, you would get nowhere fast.';
+    const errorMessage = `
+      This is a super long error that was thrown because
+      of Batman. When you stop to think about how Batman had anything to do
+      with this, you would get nowhere fast.
+    `
     ```
 
   <a name="es6-template-literals"></a>
@@ -487,6 +489,16 @@ Other Style Guides
       test = () => {
         console.log('Yup.');
       };
+    }
+
+    // best, using a well-named function
+    function logYup() {
+      console.log('Yup.');
+    }
+    
+    var test;
+    if (currentUser) {
+      test = logYup;
     }
     ```
 
@@ -624,7 +636,7 @@ Other Style Guides
     });
     ```
 
-  - [8.3](#8.3) <a name='8.3'></a> In case the expression spans over multiple lines, wrap it in parentheses for better readability.
+  - [8.3](#8.3) <a name='8.3'></a> In case the expression spans over multiple lines, wrap it in parentheses for better readability. If the expression spans multiple lines and contains complex logic, seriously consider refactoring it into a reusable well-named function.
 
   > Why? It shows clearly where the function starts and ends.
 

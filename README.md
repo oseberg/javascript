@@ -872,6 +872,7 @@ Other Style Guides
     ```javascript
     const luke = {
       jedi: true,
+      developer: 'maybe',
       age: 28,
     };
 
@@ -934,29 +935,29 @@ Other Style Guides
     const dragonball = 'z';
     ```
 
-  - [13.3](#13.3) <a name='13.3'></a> Group all your `const`s and then group all your `let`s.
+  - [13.3](#13.3) <a name='13.3'></a> Group all your `const`s and then group all your `var`s.
 
   > Why? This is helpful when later on you might need to assign a variable depending on one of the previous assigned variables.
 
     ```javascript
     // bad
-    let i, len, dragonball,
+    var i, len, dragonball,
         items = getItems(),
         goSportsTeam = true;
 
     // bad
-    let i;
+    var i;
     const items = getItems();
-    let dragonball;
+    var dragonball;
     const goSportsTeam = true;
-    let len;
+    var len;
 
     // good
     const goSportsTeam = true;
     const items = getItems();
-    let dragonball;
-    let i;
-    let length;
+    var dragonball;
+    var i;
+    var length;
     ```
 
   - [13.4](#13.4) <a name='13.4'></a> Assign variables where you need them, but place them in a reasonable place.
@@ -1211,8 +1212,8 @@ Other Style Guides
 
     ```javascript
     // bad
-    // make() returns a new element
-    // based on the passed in tag name
+    // Returns a new element
+    // based on the passed in tag name.
     //
     // @param {String} tag
     // @return {Element} element
@@ -1225,8 +1226,8 @@ Other Style Guides
 
     // good
     /**
-     * make() returns a new element
-     * based on the passed in tag name
+     * Returns a new element
+     * based on the passed in tag name.
      *
      * @param {String} tag
      * @return {Element} element
@@ -1827,57 +1828,7 @@ Other Style Guides
 **[⬆ back to top](#table-of-contents)**
 
 
-## Accessors
-
-  - [23.1](#23.1) <a name='23.1'></a> Accessor functions for properties are not required.
-  - [23.2](#23.2) <a name='23.2'></a> If you do make accessor functions use getVal() and setVal('hello').
-
-    ```javascript
-    // bad
-    dragon.age();
-
-    // good
-    dragon.getAge();
-
-    // bad
-    dragon.age(25);
-
-    // good
-    dragon.setAge(25);
-    ```
-
-  - [23.3](#23.3) <a name='23.3'></a> If the property is a `boolean`, use `isVal()` or `hasVal()`.
-
-    ```javascript
-    // bad
-    if (!dragon.age()) {
-      return false;
-    }
-
-    // good
-    if (!dragon.hasAge()) {
-      return false;
-    }
-    ```
-
-  - [23.4](#23.4) <a name='23.4'></a> It's okay to create get() and set() functions, but be consistent.
-
-    ```javascript
-    class Jedi {
-      constructor(options = {}) {
-        const lightsaber = options.lightsaber || 'blue';
-        this.set('lightsaber', lightsaber);
-      }
-
-      set(key, val) {
-        this[key] = val;
-      }
-
-      get(key) {
-        return this[key];
-      }
-    }
-    ```
+## TODO: Accessors
 
 **[⬆ back to top](#table-of-contents)**
 

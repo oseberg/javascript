@@ -37,6 +37,7 @@ Other Style Guides
   1. [ECMAScript 5 Compatibility](#ecmascript-5-compatibility)
   1. [ECMAScript 6 Styles](#ecmascript-6-styles)
   1. [Testing](#testing)
+  1. [Observables](#observables)
   1. [Performance](#performance)
   1. [Resources](#resources)
   1. [In the Wild](#in-the-wild)
@@ -1926,6 +1927,7 @@ Other Style Guides
 **[⬆ back to top](#table-of-contents)**
 
 
+
 ## ECMAScript 5 Compatibility
 
   - [26.1](#26.1) <a name='26.1'></a> Refer to [Kangax](https://twitter.com/kangax/)'s ES5 [compatibility table](http://kangax.github.com/es5-compat-table/).
@@ -1964,6 +1966,18 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
+## Observables
+  - [29.1](#29.1)<a name="29.1"></a> When setting a `let` or `const` to an Observable stream, suffix the variable with a `$` to say it is a stream.
+
+  ```javascript
+  // bad
+  const myStream = Observable.of([1, 2, 3]);
+
+  // good
+  const oneTwoThree$ = Observable.of([1, 2, 3]);
+  ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Performance
 
